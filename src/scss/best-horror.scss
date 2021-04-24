@@ -1,0 +1,230 @@
+@import "styles";
+
+body {
+    background-color: $white;
+}
+
+@keyframes blink {
+    0% {
+        color: $white;
+    }
+    50% {
+        color: $red;
+    }
+    100% {
+        color: $white;
+    }
+}
+
+header {
+    @media screen and (max-width: $small - 1) {
+        height: auto;
+        padding: 35px 0;
+        padding: 5vh 0;
+    }
+
+    @media screen and (min-width: $small) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: $fixedWidth;
+    }
+
+    @media screen and (min-width: $small) and (max-width: $large) {
+        width: $fixedWidth - 200px;
+    }
+
+    width: 100%;
+    height: 100%;
+    padding: 190px 0;
+    padding: 10vh 0 72px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $red;
+
+    h1 {
+        @media screen and (max-width: $small - 1) {
+            font-size: 16vw;
+        }
+
+        @media screen and (min-width: $small) and (max-width: $large) {
+            font-size: $h1 - 30px;
+        }
+
+        width: 80%;
+        margin: 0 auto 40px;
+        font-size: $h1;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+
+        span {
+            position: relative;
+        }
+
+        span i {
+            position: absolute;
+
+            @media screen and (max-width: $small - 1) {
+                font-size: 5vw;
+                top: 42%;
+                right: 24%;
+            }
+
+            @media screen and (min-width: $small) and (max-width: $large) {
+                top: 32px;
+                right: 12px;
+                font-size: 15px;
+            }
+            top: 50px;
+            right: 18px;
+            font-size: 25px;
+            animation: blink ease-in-out 5s infinite;
+        }
+
+        span:last-child i {
+            position: absolute;
+
+            @media screen and (max-width: $small - 1) {
+                font-size: 5vw;
+                top: 42%;
+                right: 24%;
+            }
+
+            @media screen and (min-width: $small) and (max-width: $large) {
+                top: 32px;
+                right: 12px;
+                font-size: 15px;
+            }
+
+            top: 50px;
+            right: 18px;
+            font-size: 25px;
+            animation: blink ease-in-out 10s infinite;
+        }
+    }
+
+    .bottom {
+        @media screen and (min-width: $small) and (max-width: $large) {
+            margin: 0 auto -190px;
+            margin: 0 auto -10vh;
+        }
+
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    h3 {
+        @media screen and (max-width: $small - 1) {
+            font-size: 7vw;
+        }
+
+        @media screen and (min-width: $small) and (max-width: $large) {
+            font-size: $h3 - 10px;
+        }
+
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 40px;
+    }
+
+    h3,
+    p {
+        line-height: 1.2;
+    }
+
+    p {
+        @media screen and (max-width: $small - 1) {
+            font-size: 4vw;
+        }
+
+        @media screen and (min-width: $small) and (max-width: $large) {
+            font-size: $p - 10px;
+        }
+
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    nav {
+        width: 100%;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                @media screen and (max-width: $small - 1) {
+                    margin: 0 12px 5px 0;
+                }
+
+                margin: 0 12px 20px 0;
+                padding-bottom: 5px;
+                font-size: 11px;
+                font-weight: 500;
+                color: black;
+                opacity: 0.5;
+                border-bottom: 2px solid rgba(0, 0, 0, 1);
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+main {
+    @media screen and (max-width: $small - 1) {
+        margin-left: 0;
+    }
+
+    @media screen and (min-width: $small) and (max-width: $large) {
+        margin-left: $fixedWidth - 200px;
+    }
+
+    margin-left: $fixedWidth;
+
+    .movie {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 5%, transparent, transparent, transparent, transparent) $red;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+
+        .wrapper {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+
+            .movie__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-bottom: 25px;
+
+                h4 {
+                    font-size: 32px;
+                    text-transform: uppercase;
+                }
+
+                h5 {
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        .img {
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 80px 80px -80px #000, 0 0 12px rgba(0, 0, 0, 0.06), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
