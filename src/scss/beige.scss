@@ -1,0 +1,281 @@
+@import "styles";
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin-top: 40px;
+}
+
+.header {
+    width: 100%;
+    background-color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 0px 10px;
+
+    h1 {
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+
+    button {
+        outline: none;
+        background-color: transparent;
+        border: none;
+    }
+
+    nav {
+        ul {
+            display: flex;
+
+            li {
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+
+                @media screen and (max-width: $small) {
+                    span + a {
+                        display: none;
+                    }
+                }
+
+                &:nth-child(1) {
+                    span {
+                        background-color: #dfcdaa;
+                    }
+                }
+
+                &:nth-child(2) {
+                    span {
+                        background-color: #ba7957;
+                    }
+                }
+
+                &:nth-child(3) {
+                    span {
+                        background-color: #aac6b9;
+                    }
+                }
+
+                &:nth-child(4) {
+                    span {
+                        background-color: #c98347;
+                    }
+                }
+
+                &:nth-child(5) {
+                    span {
+                        background-color: #70989d;
+                    }
+                }
+
+                &:nth-child(6) {
+                    span {
+                        background-color: #d3a745;
+                    }
+                }
+
+                &:nth-child(7) {
+                    span {
+                        background-color: #e5d9c3;
+                    }
+                }
+
+                span {
+                    margin-right: 5px;
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 50%;
+                }
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+
+                &:not(:last-child) {
+                    @media screen and (max-width: $small) {
+                        margin-right: 0;
+                    }
+
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+.posts {
+    @media screen and (max-width: 500px) {
+        grid-auto-rows: calc(100vh - 40px);
+    }
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: calc(100vh - 40px);
+
+    .post {
+        cursor: pointer;
+        padding: 20px;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+
+        .post__header,
+        footer {
+            display: flex;
+            justify-content: space-between;
+            letter-spacing: 1px;
+        }
+
+        &:nth-child(1) {
+            .invisible {
+                background-image: url("https://source.unsplash.com/random/250xx261");
+            }
+        }
+
+        &:nth-child(2) {
+            .invisible {
+                background-image: url("https://source.unsplash.com/random/250xx262");
+            }
+        }
+
+        &:nth-child(3) {
+            .invisible {
+                background-image: url("https://source.unsplash.com/random/250xx263");
+            }
+        }
+
+        &:nth-child(4) {
+            .invisible {
+                background-image: url("https://source.unsplash.com/random/250xx264");
+            }
+        }
+
+        &:nth-child(5) {
+            .invisible {
+                background-image: url("https://source.unsplash.com/random/250xx265");
+            }
+        }
+
+        &:nth-child(6) {
+            .invisible {
+                background-image: url("https://source.unsplash.com/random/250xx266");
+            }
+        }
+
+        &:nth-child(7) {
+            .invisible {
+                background-image: url("https://source.unsplash.com/random/250xx267");
+            }
+        }
+
+        &:nth-child(8) {
+            .invisible {
+                background-image: url("https://source.unsplash.com/random/250xx268");
+            }
+        }
+
+        &:nth-child(9) {
+            .invisible {
+                background-image: url("https://source.unsplash.com/random/250xx269");
+            }
+        }
+
+        &:nth-child(10) {
+            .invisible {
+                background-image: url("https://source.unsplash.com/random/250xx270");
+            }
+        }
+
+        &:nth-child(11) {
+            .invisible {
+                background-image: url("https://source.unsplash.com/random/250xx271");
+            }
+        }
+
+        &:nth-child(12) {
+            .invisible {
+                background-image: url("https://source.unsplash.com/random/250xx272");
+            }
+        }
+
+        &:nth-child(3n + 1) {
+            background-color: #dfcdaa;
+        }
+
+        &:nth-child(3n + 2) {
+            background-color: #ba7957;
+        }
+
+        &:nth-child(3n + 3) {
+            background-color: #d3a745;
+        }
+
+        &:nth-child(3n + 4) {
+            background-color: #70989d;
+        }
+
+        &:nth-child(3n + 5) {
+            background-color: #aac6b9;
+        }
+
+        .post__content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .visible {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+            }
+
+            h3 {
+                letter-spacing: 2px;
+                line-height: 1.3;
+                font-size: 26px;
+                text-align: center;
+            }
+
+            img {
+                width: 50%;
+                height: 50%;
+                margin: 0 auto 10px;
+            }
+
+            .invisible {
+                display: none;
+                height: 100%;
+                width: 100%;
+                background-position: center center;
+                background-size: cover;
+            }
+        }
+
+        &:hover {
+            .post__content {
+                .visible {
+                    display: none;
+                }
+
+                .invisible {
+                    display: block;
+                }
+            }
+        }
+    }
+}
