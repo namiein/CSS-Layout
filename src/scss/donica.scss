@@ -1,0 +1,78 @@
+@import "styles";
+
+@import url("https://fonts.googleapis.com/css?family=Nunito|PT+Serif:400,400i&display=swap");
+
+body {
+    padding: 30px 40px;
+    font-family: "PT Serif", serif;
+    background-color: #f0efeb;
+    color: $black;
+    line-height: 1.5;
+}
+
+header {
+    @media screen and (max-width: 601px) {
+        height: 50vh;
+    }
+
+    height: 100vh;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 7vw;
+}
+
+.works {
+    .works__header {
+        @extend %grid;
+        padding-bottom: 10px;
+
+        span {
+            @extend %tinyText;
+        }
+    }
+
+    .works__list {
+        .works__work {
+            cursor: pointer;
+            font-size: 2vw;
+            border-top: 1px solid $black;
+            padding: 20px 0px;
+            @extend %grid;
+
+            &:hover {
+                font-style: italic;
+            }
+        }
+    }
+}
+.cv,
+.about {
+    @media screen and (max-width: $small) {
+        height: 25vh;
+    }
+    height: 50vh;
+}
+
+.cv,
+.about {
+    padding-top: 15vh;
+    font-size: 2.5vw;
+
+    span {
+        @extend %tinyText;
+    }
+}
+
+a {
+    color: $red1;
+
+    &:hover {
+        font-style: italic;
+    }
+}
+
+.about {
+    height: 50vh;
+}
