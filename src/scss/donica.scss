@@ -4,10 +4,10 @@
 
 body {
     padding: 30px 40px;
-    font-family: "PT Serif", serif;
-    background-color: #f0efeb;
     color: $black;
     line-height: 1.5;
+    font-family: "PT Serif", serif;
+    background-color: #f0efeb;
 }
 
 header {
@@ -17,10 +17,10 @@ header {
 
     height: 100vh;
     letter-spacing: 1px;
-}
 
-h1 {
-    font-size: 7vw;
+    h1 {
+        font-size: 7vw;
+    }
 }
 
 .works {
@@ -35,10 +35,10 @@ h1 {
 
     .works__list {
         .works__work {
-            cursor: pointer;
+            padding: 20px 0px;
             font-size: 2vw;
             border-top: 1px solid $black;
-            padding: 20px 0px;
+            cursor: pointer;
             @extend %grid;
 
             &:hover {
@@ -52,6 +52,7 @@ h1 {
     @media screen and (max-width: $small) {
         height: 25vh;
     }
+
     height: 50vh;
 }
 
@@ -71,8 +72,4 @@ a {
     &:hover {
         font-style: italic;
     }
-}
-
-.about {
-    height: 50vh;
 }
