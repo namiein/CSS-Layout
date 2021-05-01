@@ -182,7 +182,9 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 7vw;
+        background-image: url("https://source.unsplash.com/random/1");
+        background-position: center center;
+        background-size: cover;
     }
 
     .under-hero__content {
@@ -233,16 +235,6 @@ header {
     grid-template-rows: repeat(3, 60vh);
     margin-bottom: 80px;
 
-    .img {
-        min-height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: black;
-        background-color: white;
-        font-size: 5vw;
-    }
-
     .blog__post {
         @media screen and (max-width: $small) {
             grid-template-columns: 1fr;
@@ -276,6 +268,31 @@ header {
             }
         }
     }
+
+    .img {
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .blog__post:first-of-type .img {
+        background-image: url("https://source.unsplash.com/random/2");
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .blog__post:nth-of-type(2) .img {
+        background-image: url("https://source.unsplash.com/random/3");
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .blog__post:last-of-type .img {
+        background-image: url("https://source.unsplash.com/random/4");
+        background-position: center center;
+        background-size: cover;
+    }
 }
 
 .gallery {
@@ -296,14 +313,50 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 5vw;
-            color: #ff1493;
-            transition: color 0.3s linear;
-
-            &:hover {
-                color: navy;
-            }
         }
+    }
+
+    .gallery__poster:first-of-type .img {
+        background-image: url("https://source.unsplash.com/random/5");
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .gallery__poster:nth-of-type(2) .img {
+        background-image: url("https://source.unsplash.com/random/6");
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .gallery__poster:nth-of-type(3) .img {
+        background-image: url("https://source.unsplash.com/random/7");
+        background-position: center center;
+        background-size: cover;
+    }
+    .gallery__poster:nth-of-type(4) .img {
+        background-image: url("https://source.unsplash.com/random/8");
+        background-position: center center;
+        background-size: cover;
+    }
+    .gallery__poster:nth-of-type(5) .img {
+        background-image: url("https://source.unsplash.com/random/9");
+        background-position: center center;
+        background-size: cover;
+    }
+    .gallery__poster:nth-of-type(6) .img {
+        background-image: url("https://source.unsplash.com/random/10");
+        background-position: center center;
+        background-size: cover;
+    }
+    .gallery__poster:nth-of-type(7) .img {
+        background-image: url("https://source.unsplash.com/random/11");
+        background-position: center center;
+        background-size: cover;
+    }
+    .gallery__poster:last-of-type .img {
+        background-image: url("https://source.unsplash.com/random/12");
+        background-position: center center;
+        background-size: cover;
     }
 }
 

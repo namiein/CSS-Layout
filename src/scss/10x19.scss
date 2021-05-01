@@ -64,6 +64,9 @@ h1 {
 .center-image {
     grid-column: 2 / -2;
     grid-row: 2 / -2;
+    background-image: url("https://source.unsplash.com/random/1");
+    background-size: cover;
+    background-position: center center;
     animation: showImg 1s ease-in-out forwards;
 }
 
@@ -181,23 +184,7 @@ body > :nth-child(5) {
     grid-column: 2 / -2;
     grid-row: 2 / -2;
     color: #33006f;
-
-    i {
-        animation: movingGhost 2s ease-in-out infinite;
-    }
-}
-
-@keyframes movingGhost {
-    0% {
-        transform: none;
-    }
-
-    50% {
-        color: #1d1160;
-        transform: scale(3) rotateY(360deg);
-    }
-
-    100% {
-        transform: none;
-    }
+    background-image: url("https://source.unsplash.com/random/2");
+    background-position: center center;
+    background-size: cover;
 }
