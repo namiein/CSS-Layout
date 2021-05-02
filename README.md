@@ -1,6 +1,6 @@
 # CSS-Layout
 
-Nomadcoders (S)CSS Layout Master
+Practicing CSS Layout with Nomadcoders [(S)CSS Layout Master](https://nomadcoders.co/css-layout-masterclass/lobby)   
 
 ## Cloned Websites:
 
@@ -14,4 +14,4 @@ Nomadcoders (S)CSS Layout Master
 -   [x] [https://beige.de/](https://beige.de/)
 -   [x] [http://donicaida.com/](http://donicaida.com/)
 -   [x] [https://canalstreet.market/](https://canalstreet.market/)
--   [x] [https://wonhundred.com/](https://wonhundred.com/)
+-   [] [https://wonhundred.com/](https://wonhundred.com/)
