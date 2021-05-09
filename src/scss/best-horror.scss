@@ -5,23 +5,6 @@ body {
 }
 
 header {
-    @media screen and (max-width: $small - 1px) {
-        height: auto;
-        padding: 35px 0;
-        padding: 5vh 0;
-    }
-
-    @media screen and (min-width: $small) {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: $fixedWidth;
-    }
-
-    @media screen and (min-width: $small) and (max-width: $large) {
-        width: $fixedWidth - 200px;
-    }
-
     height: 100%;
     padding: 190px 0;
     padding: 10vh 0 72px 0;
@@ -31,14 +14,6 @@ header {
     color: $red;
 
     h1 {
-        @media screen and (max-width: $small - 1) {
-            font-size: 16vw;
-        }
-
-        @media screen and (min-width: $small) and (max-width: $large) {
-            font-size: $h1 - 30px;
-        }
-
         width: 80%;
         margin: 0 auto 40px;
         font-size: $h1;
@@ -52,24 +27,11 @@ header {
     }
 
     .bottom {
-        @media screen and (min-width: $small) and (max-width: $large) {
-            margin: 0 auto -190px;
-            margin: 0 auto -10vh;
-        }
-
         width: 80%;
         margin: 0 auto;
     }
 
     h3 {
-        @media screen and (max-width: $small - 1) {
-            font-size: 7vw;
-        }
-
-        @media screen and (min-width: $small) and (max-width: $large) {
-            font-size: $h3 - 10px;
-        }
-
         font-size: 30px;
         font-weight: 500;
         margin-bottom: 40px;
@@ -81,14 +43,6 @@ header {
     }
 
     p {
-        @media screen and (max-width: $small - 1) {
-            font-size: 4vw;
-        }
-
-        @media screen and (min-width: $small) and (max-width: $large) {
-            font-size: $p - 10px;
-        }
-
         font-weight: 500;
         font-size: 18px;
         margin-bottom: 40px;
@@ -102,10 +56,6 @@ header {
             flex-wrap: wrap;
 
             li {
-                @media screen and (max-width: $small - 1) {
-                    margin: 0 12px 5px 0;
-                }
-
                 margin: 0 12px 20px 0;
                 padding-bottom: 5px;
                 font-size: 11px;
@@ -124,14 +74,6 @@ header {
 }
 
 main {
-    @media screen and (max-width: $small - 1) {
-        margin-left: 0;
-    }
-
-    @media screen and (min-width: $small) and (max-width: $large) {
-        margin-left: $fixedWidth - 200px;
-    }
-
     margin-left: $fixedWidth;
 
     .movie {
@@ -190,5 +132,73 @@ main {
         &:last-of-type .img {
             background-image: url("https://source.unsplash.com/random/4");
         }
+    }
+}
+
+@media screen and (max-width: $small - 1px) {
+    header {
+        height: auto;
+        padding: 35px 0;
+        padding: 5vh 0;
+
+        h1 {
+            font-size: 16vw;
+        }
+
+        h3 {
+            font-size: 7vw;
+        }
+
+        p {
+            font-size: 4vw;
+        }
+
+        nav {
+            ul {
+                li {
+                    margin: 0 12px 5px 0;
+                }
+            }
+        }
+    }
+
+    main {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: $small) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: $fixedWidth;
+    }
+}
+
+@media screen and (min-width: $small) and (max-width: $large) {
+    header {
+        width: $fixedWidth - 200px;
+
+        h1 {
+            font-size: $h1 - 30px;
+        }
+
+        .bottom {
+            margin: 0 auto -190px;
+            margin: 0 auto -10vh;
+        }
+
+        h3 {
+            font-size: $h3 - 10px;
+        }
+
+        p {
+            font-size: $p - 10px;
+        }
+    }
+
+    main {
+        margin-left: $fixedWidth - 200px;
     }
 }
