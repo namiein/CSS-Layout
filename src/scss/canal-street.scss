@@ -48,7 +48,7 @@ h4 {
 
 main {
     header {
-        margin-top: 250px;
+        margin-top: 200px;
         h1 {
             width: 80%;
             margin-bottom: 120px;
@@ -200,6 +200,8 @@ main {
     .about {
         margin-top: 30px;
         margin-bottom: 60px;
+        padding: 33px;
+
         h2 {
             margin-bottom: 30px;
         }
@@ -218,6 +220,7 @@ main {
 
     .events {
         margin-bottom: 30px;
+        padding: 33px;
         .events__list {
             margin-top: 30px;
             grid-template-columns: 1fr;

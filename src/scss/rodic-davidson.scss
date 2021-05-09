@@ -30,8 +30,8 @@ header {
     }
 
     nav {
-        padding-left: 10%;
         grid-column: 2 / -1;
+        padding-left: 10%;
 
         ul {
             display: flex;
@@ -51,10 +51,6 @@ header {
 }
 
 main {
-    @media screen and (max-width: $small) {
-        grid-template-columns: 1fr;
-    }
-
     display: grid;
     grid-template-columns: 1.3fr 4fr;
     align-items: start;
@@ -64,17 +60,11 @@ main {
 }
 
 section {
-    @media screen and (max-width: $small) {
-        grid-column: 1 / -1;
-        grid-template-columns: 1fr;
-        grid-column: 1 / -1;
-    }
-
-    display: grid;
     grid-column: 2 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
     row-gap: 80px;
-    grid-template-columns: repeat(2, 1fr);
 
     .photo {
         &:hover {
@@ -94,5 +84,16 @@ section {
             line-height: 20px;
             font-weight: 300;
         }
+    }
+}
+
+@media screen and (max-width: $small) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        grid-column: 1 / -1;
+        grid-template-columns: 1fr;
     }
 }

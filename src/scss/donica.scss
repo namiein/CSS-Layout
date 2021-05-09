@@ -11,10 +11,6 @@ body {
 }
 
 header {
-    @media screen and (max-width: 601px) {
-        height: 50vh;
-    }
-
     height: 100vh;
     letter-spacing: 1px;
 
@@ -49,10 +45,6 @@ header {
 }
 .cv,
 .about {
-    @media screen and (max-width: $small) {
-        height: 25vh;
-    }
-
     height: 50vh;
 }
 
@@ -71,5 +63,19 @@ a {
 
     &:hover {
         font-style: italic;
+    }
+}
+
+@media screen and (max-width: $small) {
+    .cv,
+    .about {
+        height: 35vh;
+        padding-top: 5vh;
+    }
+}
+
+@media screen and (max-width: 601px) {
+    header {
+        height: 50vh;
     }
 }

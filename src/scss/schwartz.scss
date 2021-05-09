@@ -5,10 +5,6 @@ body {
 }
 
 main {
-    @media screen and (max-width: $large) {
-        width: 80%;
-    }
-
     width: 55%;
     margin: 0 auto;
     grid-column-start: 2;
@@ -16,11 +12,6 @@ main {
 }
 
 p {
-    @media screen and (max-width: $small) {
-        font-size: 5vw;
-        text-align: left;
-    }
-
     font-size: $fontMedium;
 }
 
@@ -30,11 +21,6 @@ img {
 }
 
 .hero {
-    @media screen and (max-width: $small) {
-        margin-top: 75px;
-        margin-bottom: 75px;
-    }
-
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -46,14 +32,11 @@ img {
         width: 90%;
         height: 70vh;
         background-image: url("https://source.unsplash.com/random/");
+        background-position: center center;
+        background-size: cover;
     }
 
     h2 {
-        @media screen and (max-width: $small) {
-            margin-top: 40px;
-            margin-bottom: 60px;
-        }
-
         margin-top: 80px;
         margin-bottom: 120px;
         font-weight: 500;
@@ -61,20 +44,10 @@ img {
     }
 
     p {
-        @media screen and (max-width: $small) {
-            font-size: 5vw;
-            text-align: left;
-        }
-
         font-size: $fontMedium;
         text-align: justify;
 
         span {
-            @media screen and (max-width: $small) {
-                font-size: 5vw;
-                text-align: left;
-            }
-
             margin-right: 50px;
             font-size: $fontMedium - 5px;
             font-weight: 500;
@@ -83,25 +56,14 @@ img {
 }
 
 .products {
-    @media screen and (max-width: $small) {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
     .product {
-        @media screen and (max-width: $small) {
-            padding: 0;
-            grid-template-columns: 1fr;
-            gap: 0;
-        }
-
         padding: 20px 0;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 25px;
         border-top: $border;
         grid-column-start: span 2;
 
@@ -112,42 +74,20 @@ img {
             }
         }
 
-        img {
-            @media screen and (max-width: $small) {
-                width: 100%;
-                height: auto;
-            }
-        }
-
         div {
             padding: 20px 0px;
         }
 
         p {
-            @media screen and (max-width: $small) {
-                font-size: 5vw;
-                margin-bottom: 25px;
-            }
-
             margin-bottom: 50px;
         }
 
         .product__category {
-            @media screen and (max-width: $small) {
-                font-size: 7vw;
-                margin-bottom: 25px;
-            }
-
             @extend %categoryTitle;
         }
     }
 
     .line {
-        @media screen and (max-width: $small) {
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-start: span 2;
@@ -162,11 +102,6 @@ img {
             }
 
             p {
-                @media screen and (max-width: $small) {
-                    margin-top: 15px;
-                    font-size: 5vw;
-                }
-
                 margin-top: 30px;
                 font-size: 22px;
             }
@@ -175,12 +110,6 @@ img {
 }
 
 .links {
-    @media screen and (max-width: $small) {
-        grid-template-columns: 1fr;
-        margin-top: 50px;
-        margin-bottom: 100px;
-    }
-
     margin-top: 100px;
     margin-bottom: 200px;
     padding-top: 20px;
@@ -196,21 +125,11 @@ img {
         justify-content: flex-start;
 
         h4 {
-            @media screen and (max-width: $small) {
-                font-size: 7vw;
-                margin-bottom: 15px;
-            }
-
             @extend %categoryTitle;
             margin-bottom: 30px;
         }
 
         span {
-            @media screen and (max-width: $small) {
-                font-size: 5vw;
-                margin-bottom: 10px;
-            }
-
             margin-bottom: 20px;
             font-size: 22px;
         }
@@ -218,12 +137,6 @@ img {
 }
 
 a.btn {
-    @media screen and (max-width: $small) {
-        margin-bottom: 10px;
-        display: block;
-        text-align: center;
-    }
-
     @extend %btn;
 }
 
@@ -233,15 +146,6 @@ footer {
     background-color: #4d4c4c;
 
     .footer__top {
-        @media screen and (max-width: 600px) {
-            width: 80%;
-            grid-template-columns: 1fr;
-        }
-
-        @media screen and (min-width: 601px) and (max-width: $large) {
-            width: 80%;
-        }
-
         width: 55%;
         margin: 0 auto;
         display: grid;
@@ -249,18 +153,10 @@ footer {
         color: white;
 
         span {
-            @media screen and (max-width: $small) {
-                font-size: 10vw;
-            }
-
             font-size: 38px;
         }
 
         ul {
-            @media screen and (max-width: 425px) {
-                margin-top: 20px;
-            }
-
             width: 100%;
             display: flex;
             align-items: center;
@@ -270,5 +166,134 @@ footer {
                 margin-right: 10px;
             }
         }
+    }
+}
+
+@media screen and (max-width: $small) {
+    p {
+        font-size: 5vw;
+        text-align: left;
+    }
+
+    .hero {
+        margin-top: 75px;
+        margin-bottom: 75px;
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        p {
+            font-size: 5vw;
+            text-align: left;
+
+            span {
+                font-size: 5vw;
+                text-align: left;
+            }
+        }
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+        .product {
+            padding: 0;
+            grid-template-columns: 1fr;
+            gap: 0;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            p {
+                font-size: 5vw;
+                margin-bottom: 25px;
+            }
+
+            .product__category {
+                font-size: 7vw;
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    .line {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        .product {
+            p {
+                margin-top: 15px;
+                font-size: 5vw;
+            }
+        }
+    }
+
+    .links {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+        margin-bottom: 100px;
+
+        .link {
+            h4 {
+                font-size: 7vw;
+                margin-bottom: 15px;
+            }
+
+            span {
+                font-size: 5vw;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    a.btn {
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    footer {
+        .footer__top {
+            span {
+                font-size: 10vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    footer {
+        .footer__top {
+            ul {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        .footer__top {
+            width: 80%;
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: $large) {
+    footer {
+        .footer__top {
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: $large) {
+    main {
+        width: 80%;
     }
 }
