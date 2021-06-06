@@ -1,6 +1,7 @@
 # CSS-Layout
 
 Practicing CSS Layout with Nomadcoders [(S)CSS Layout Master](https://nomadcoders.co/css-layout-masterclass/lobby)   
+2021-04-24 ~ 2021-05-10 (Weekends Only)   
 
 ## Cloned Websites:
 
